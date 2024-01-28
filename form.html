@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valid Form</title>
+    <style>
+      div {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="index.php" method="post">
+      <h1>Application name: AAST_BIS class registration</h1>
+      <span style="color: red; display: block; margin-bottom: 5px"
+        >*Required field</span
+      >
+      <div>
+        <label for="user-name">Name:</label>
+        <input type="text" name="name" id="user-name" />
+        <span style="color: red">*</span>
+      </div>
+      <div>
+        <label for="mail">E-mail:</label>
+        <input type="text" name="e-mail" id="mail" />
+        <span style="color: red">*</span>
+      </div>
+      <div>
+        <label for="gp">Group#</label>
+        <input type="text" name="group" id="gp" />
+      </div>
+      <div style="display: flex">
+        <label for="class">Class details:</label>
+        <textarea name="class" id="class" cols="30" rows="10"></textarea>
+      </div>
+      <div>
+        <span>Gender:</span>
+        <input type="radio" id="male" name="gender" value="Male" />
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="Female" />
+        <label for="female">Female</label>
+        <span style="color: red">*</span>
+      </div>
+      <div>
+        <label for="cs">Select Courses:</label>
+        <select name="Courses[]" id="cs" multiple>
+          <option value="php">PHP</option>
+          <option value="JavaScript">JavaScript</option>
+          <option value="HTML">HTML</option>
+          <option value="jQuery">jQuery</option>
+          <option value="CSS">CSS</option>
+        </select>
+        <span style="color: red"
+          >hold down ctrl key to select multiple option</span
+        >
+      </div>
+      <div>
+        <label for="agree">Agree</label>
+        <input type="checkbox" name="agree" id="agree" />
+        <span style="color: red">*</span>
+      </div>
+      <input type="submit" value="Submit" name="submit-btn" /> <br />
+    </form>
+  </body>
+</html>
